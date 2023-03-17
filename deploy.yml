@@ -1,0 +1,10 @@
+---
+
+- name: Playbook for deploy using ansistrano.deploy
+  hosts: all
+
+  vars:
+   ansistrano_deploy_to: /tmp/app/
+
+  roles:
+      - ansistrano.deploy

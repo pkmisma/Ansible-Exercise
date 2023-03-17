@@ -1,0 +1,21 @@
+---
+        - name: install the web server
+          package:
+               name: "{{ webserver }}"
+               state: present
+          tags:
+              - webserver
+
+        - name: copy the customised index.html file
+          copy:
+               src: index.html
+               dest: /var/www/html/
+          tags:
+              - index
+
+        - name: creating symlink
+          file:
+             src: /etc/nginx/sites-available/default
+             dest: /etc/nginx/sites-enabled/default
+             state: link
+             notify: restart the service

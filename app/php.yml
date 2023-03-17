@@ -1,0 +1,17 @@
+- name: playbook to install php
+  hosts: all
+  become: yes
+  tasks:
+
+
+          - name: install php
+            apt:
+               name: php
+               state: present
+
+          - name: service
+            service:
+                name: php-fpm
+                enabled: yes
+                state: started
+

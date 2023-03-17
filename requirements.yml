@@ -1,0 +1,2 @@
+ - src: ansistrano.rollback
+   version: 3.1.0
