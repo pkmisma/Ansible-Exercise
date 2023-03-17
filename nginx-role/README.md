@@ -9,8 +9,7 @@ No pre-requesites are need for this.
 Role Variables
 --------------
 
-A description of the settable variables for this role should go here, including any variables that are in defaults/main.yml, vars/main.yml, and any variables that can/should be set via parameters to the role. Any variables that are read from other roles and/or the global scope (ie. hostvars, group vars, etc.) should be mentioned here as well.
-
+The variable set is webserver which is nginx here in this role. This role will install nginx and add the customised index.html
 Dependencies
 ------------
 
