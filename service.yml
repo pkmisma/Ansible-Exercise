@@ -12,7 +12,7 @@
       user:
         name: deploy
         state: present
-        password: 
+        password: {{ upassword | password_hash('sha512') }}
         generate_ssh_key: yes
         ssh_key_bits: 2048
         ssh_key_file: .ssh/id_rsa
